@@ -99,7 +99,7 @@ class WebUiDaemon < Daemon
     birth_year = user_config['birth_year']
     cable_provider = user_config['cable_provider']
 
-    1.times do |att|
+    3.times do |att|
       begin
         driver = build_driver
         
