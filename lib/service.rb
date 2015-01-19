@@ -16,9 +16,10 @@ class WebUiDaemon < Daemon
 
       has_run = false
       loop do
-        if Time.now.hour == 17 and not has_run
+        if Time.now.hour == 0 and not has_run
           register_user 'Joey'
           register_user 'Katie'
+          register_user 'Sabra'
           has_run = true
         elsif Time.now.hour == 23 and has_run
           # Reset has_run so that automation is picked up the following day.
