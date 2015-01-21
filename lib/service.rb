@@ -146,7 +146,7 @@ class WebUiDaemon < Daemon
     driver.find_element(:css => '#login_email input[name=\'email\']').send_keys email
     driver.find_element(:css => 'button.btn_login').click
 
-    Selenium::WebDriver::Wait.new(:timeout => 10).until do
+    Selenium::WebDriver::Wait.new(:timeout => 30).until do
       driver.find_element(:id => 'submit').displayed?
     end
 
@@ -183,7 +183,7 @@ class WebUiDaemon < Daemon
     driver.switch_to.default_content
 
     # Thank you for entering.
-    Selenium::WebDriver::Wait.new(:timeout => 15).until do
+    Selenium::WebDriver::Wait.new(:timeout => 30).until do
       driver.find_element(:css => 'h1.reg_thanks')
     end
 
@@ -205,7 +205,7 @@ class WebUiDaemon < Daemon
     end
     driver.switch_to.frame('hwframe')
 
-    Selenium::WebDriver::Wait.new(:timeout => 10).until do
+    Selenium::WebDriver::Wait.new(:timeout => 30).until do
       driver.find_element(:id => 'submit').displayed?
     end
 
@@ -242,7 +242,7 @@ class WebUiDaemon < Daemon
     driver.switch_to.default_content
 
     # Thank you for entering.
-    Selenium::WebDriver::Wait.new(:timeout => 15).until do
+    Selenium::WebDriver::Wait.new(:timeout => 30).until do
       driver.find_element(:css => 'div.reg_thanks')
     end
   end
