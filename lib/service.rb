@@ -20,6 +20,8 @@ class WebUiDaemon < Daemon
           register_user 'Joey'
           register_user 'Katie'
           register_user 'Sabra'
+          register_user 'Judy'
+          register_user 'Gary'
           has_run = true
         elsif Time.now.hour == 23 and has_run
           # Reset has_run so that automation is picked up the following day.
